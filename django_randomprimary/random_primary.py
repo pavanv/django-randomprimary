@@ -102,8 +102,8 @@ class RandomPrimaryIdModel(models.Model):
     KEYSUFFIX = ""
     CRYPT_KEY_LEN_MIN = 10
     CRYPT_KEY_LEN_MAX = 10
-    _FIRSTIDCHAR = string.ascii_letters                  # First char: Always a letter
-    _IDCHARS = string.digits + string.ascii_letters  # Letters and digits for the rest
+    _FIRSTIDCHAR = string.ascii_lowercase                  # First char: Always a letter
+    _IDCHARS = string.digits + string.ascii_lowercase  # Letters and digits for the rest
 
     """ Our new ID field """
     id = RandomIdField(db_index=True,
